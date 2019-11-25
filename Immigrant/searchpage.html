@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+           Search Page
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_searchpage.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+//             $(document).ready(function(){
+                
+// $("#div2").hide();
+//             });
+        function show(x)
+        {
+            if(x==1){
+                document.getElementById('div1').style.display='block';
+                document.getElementById('div2').style.display='none';
+                document.getElementById('div3').style.display='none';
+            }
+            if(x==2){
+                document.getElementById('div2').style.display='block';
+                document.getElementById('div1').style.display='none';
+                document.getElementById('div3').style.display='none';
+            }
+            if(x==3){
+                document.getElementById('div3').style.display='block';
+                document.getElementById('div1').style.display='none';
+                document.getElementById('div2').style.display='none';
+            }
+        }
+                </script>
+    </head>
+
+    <body bgcolor=f3f3f3>
+            <div class="div_class_search" align="center">
+               
+                    <form action="search.php" method="POST"> <!-- here put php file name-->
+                        <div class="form_div_class_search">
+                            <img src="search1.png">
+                            <br>
+                            <br>
+                            <!-- <div class="forgot_icon"></div> -->
+                            <!-- <label for="uname"><b>User name</b></label> -->
+                            <div class="option" align="center" >
+                                 
+                            <input type="radio" name="radio" onclick="show(1)"  value="1"checked> &nbsp;&nbsp;<b>I have Bengali Card number</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="radio" onclick="show(2)" value="2"> &nbsp;&nbsp;<b>I have Agent Id</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="radio"onclick="show(3)" value="3"> &nbsp;&nbsp; <b>Other</b>
+                            </div>
+                            <br>
+                            <br>
+                           <div id="div1">
+                            <input type="tel" autocomplete="off" placeholder="Bengali card number" name="tbnum" onKeypress="isInputNumber(event)" >
+                            <input type="text" placeholder="Name" name="tname"  >
+                        </div>
+                        <div id="div3" >
+                            <input type="text" autocomplete="off" placeholder="District" name="tdist" >
+                            <!-- <label for="password"><b>Password</b></label> -->
+                            <input type="text" placeholder="Town" name="tcity" >
+                            <input type="month" placeholder="Arrival month" name="tarrival"  ></div>
+                            <div id="div2">
+                            <input type="tel" placeholder="Agent Id" name="tagent" onKeypress="isInputNumber(event)" >
+                            <input type="text" placeholder="Agent Name" name="tagentname" >
+                        </div>
+                            <button class="button_search"  type="submit">SEARCH</button>
+                            <br>
+                            <br>
+                            <br>
+                            <br><br>
+                        </div>
+                    </form>
+                    </div>
+<script>
+                    function isInputNumber(evt)
+                    {
+                        var ch=String.fromCharCode(evt.which);
+                        if(!(/[0-9]/.test(ch)))
+                        {
+                            evt.preventDefault();
+                        }
+                    }
+                        </script>
+    </body>
+</html>

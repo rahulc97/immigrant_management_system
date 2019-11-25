@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+            Sign Up
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_login.css">
+    </head>
+
+    <body >
+            <div class="div_class_signup" align="center">
+                    <form method="POST" action="adminsignup.php"> <!-- here put php file name-->
+                        <div class="form_div_class_signup">
+                            <div class="signup_icon"></div>
+                            <input type="text" autocomplete="off" placeholder="Name" name="tname" required>
+                            <input type="text" autocomplete="off" placeholder="Username" name="tuname" required>
+                            <input type="tel" autocomplete="off" placeholder="Mobile" name="tmob" required maxlength="10">
+                            <input type="email" placeholder="Email" name="temail" required>
+                            <!-- <label for="uname"><b>User name</b></label> -->
+                                                      <!-- <label for="password"><b>Password</b></label> -->
+                            
+                            <input type="password" placeholder="Password" name="tpassword" pattern=".{8,}" title="Minimum length 8" required>
+                            <input type="password" placeholder="Re-Password" name="trepassword" pattern=".{8,}" title="Minimum length 8" required>
+            
+                            <button type="submit" >SIGN UP</button>
+            
+                            
+                        </div>
+                    </form>
+                    </div>
+    </body>
+</html>

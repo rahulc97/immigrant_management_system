@@ -1,0 +1,50 @@
+/* Ensure proper sizing */
+*{
+    box-sizing: border-box;
+    
+  }
+
+  /* Column container */
+  .row { 
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+      flex: 20%; /* Set the width of the sidebar */
+      background-color:#d3d3d3; /* Grey background color */
+      padding: 1px; /*Some padding*/
+  
+  }
+  
+  /* Main column */
+  .main { 
+      flex: 80%; /* Set the width of the main content */
+      background-color: #f1f1f1; /* White background color */
+      padding: 20px; /* Some padding */
+  }
+
+ .side ul li{
+     float: none;
+     display: block;
+     height: 50px;
+ }
+ .side ul li a{
+    color: rgb(102, 102, 255);
+ }
+ .side ul li a:hover{
+    color: rgb(10, 10, 51);
+ }
+ .side_head{
+    /* background-color: rgb(198, 83, 140); */
+    /* background-color: rgb(255, 240, 179); */
+    background-color:rgba(0, 51, 102,0.5);
+    font-size: 16px;
+    /* color: #080808; */
+    color: beige;
+    text-align:center;
+    width: 100%;
+    padding: 10px;
+ }

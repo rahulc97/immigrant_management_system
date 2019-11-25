@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+           Search Page
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_searchpage.css">
+        <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body bgcolor=f3f3f3>
+        <div class="div_class_search" align="center">
+            <table border='1' align='center' cellpadding='7'><tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Photo No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; First Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Middle Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Town&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+                <tr><td >  <img src="data:image/jpeg;base64,'.base64_encode($a[4]).'" height="100" width="100" /></td><td name="fname"></td><td name="mname"></td><td name="lname"></td><td name="town"></td><td>
+				<form >
+				     <input type='hidden' name='action' value='1'>
+					 <input type='hidden' name='id' value='$a[0]' >
+				     <input type='submit' name='bview' value='View'> 
+					 </form>
+					
+					 </td></tr>
+
+
+                    </table>
+                </div></body></html>
+
+                   
+                   <?php
+                     
+                     
+                            $radio=filter_input(INPUT_POST,'radio');
+                           $bnum=filter_input(INPUT_POST,'tbnum');
+                           $bname=filter_input(INPUT_POST,'tname');
+                           $dist=filter_input(INPUT_POST,'tdist');
+                           $city=filter_input(INPUT_POST,'tcity');
+                           $arrival=filter_input(INPUT_POST,'tarrival');
+                           $agent=filter_input(INPUT_POST,'tagent');
+                           $agentname=filter_input(INPUT_POST,'tagentname');
+                           
+                           $dbusername="root";
+                           $dbpassword="";
+                           $dbhost="localhost";
+                           $dbname="immigrant";
+                     
+                           $con= new mysqli($dbhost,$dbusername,$dbpassword,$dbname);
+                           if(mysqli_connect_error())
+                           {
+                                 die('Connection error ('.mysqli_connect_errno().')'.mysqli_connect_error());
+                           }
+                           else
+                           {
+                                 $table="immigrant_data";
+                                 if($radio==1)
+                                 {
+                                 $query="select * from $table where  id=$bnum and fname='$bname'";
+                                 }
+                                 elseif($radio==2)
+                                 {
+                                     $query="select * from $table where  agentid=$agent and agent='$agentname'";
+                                   
+                                 }
+                                 elseif($radio==3){
+                               
+                                     $query="select * from $table where  dist='$dist' and town='$city' and arrival  LIKE '$arrival%'";
+                                     
+                                 }
+                                
+                                 
+                                 $q=$con->query($query);
+                                 if($q)
+                                 {
+                                    
+                                     
+                     
+                                     while($a=mysqli_fetch_array($q,MYSQLI_BOTH))
+                                     {
+                                         
+                     
+                                       
+                                         
+                                     }
+                     
+                                     
+                                 }
+                           }
+                     ?>
+
+                   

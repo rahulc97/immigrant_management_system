@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+          Update Data
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_card.css">
+    </head>
+
+    <body >
+        
+        <div class="div_class" align="center">
+        <form  method="POST" action="dataupdate.php"> <!-- here put php file name-->
+            <div class="form_div_class">
+                <div class="form_div_class_card">
+                    <div class="forgot_icon"></div>
+                    <!-- <label for="uname"><b>User name</b></label> -->
+                    <input type="tel" autocomplete="off" placeholder="Bengali Card Number" name="tbid"  onKeypress="isInputNumber(event)" required maxlength="12">
+                    <input type="text" placeholder="Aadhar Number" name="taadhar"  onKeypress="isInputNumber(event)" required maxlength="12">
+                    <input type="tel" autocomplete="off" placeholder="Mobile" name="tmob" onKeypress="isInputNumber(event)"  required  maxlength="10">
+                    <button class="button_card"  type="submit">LOGIN</button>
+            </div>
+        </form>
+        </div>
+<script>
+        function isInputNumber(evt)
+        {
+            var ch=String.fromCharCode(evt.which);
+            if(!(/[0-9]/.test(ch)))
+            {
+                evt.preventDefault();
+            }
+        }</script>
+    </body>
+
+</html>

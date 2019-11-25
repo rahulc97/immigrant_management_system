@@ -1,0 +1,127 @@
+body{
+    background: #ddd8d8;
+}
+form {
+    position: relative;
+    /* display: block; */
+    /* background: rgb(133, 173, 173); */
+    background: rgb(235, 235, 224);
+    /* border: 3px solid rgb(71, 107, 107); */
+    border: 3px solid #d3d3d3;
+    width: 100%;
+    height: 100%;
+    /* margin: 0,2; */
+    border-radius: 15px;
+    /* z-index: -1; */
+   
+}
+ .option{
+    /* float: left!important; */
+    border-color: #962390;
+  color: #962390;
+ 
+} 
+input[type="radio"]{
+    width:15px!important ;
+    height:15px!important;
+    display: inline;
+}
+label{ float: left!important;
+    border-color: #962390;
+    color: #962390;
+}
+input{
+    width: 40%;
+    height: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+   border-top-style: none;
+   border-bottom-style:  solid ;
+   border-left-style: none;
+   border-right-style: none;
+   background: transparent;
+   border-width: 1.1px;
+  border-color: #962390;
+  color: #962390;
+}
+input:focus{   /* to remove the text box focus */
+    outline:none;
+    
+}
+ ::placeholder{ /* used to change the hint colour in text box */
+    color: #962390;
+}
+
+
+.button_search{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    width: 35%;
+    height: 30px;;
+    display: block;
+    color:#fff;
+    font-size: 20px;
+    background: #962390;
+    border-radius: 15px;
+    border: none;
+}
+button:focus{
+    outline: none;
+}
+
+
+.div_class_search{
+    position: relative;
+    /* display: block; */
+    /* padding-left: 30%; */
+    /* padding-top: 10%; */
+    /* margin: 50px,auto; */
+    /* margin: 50,30; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom:30px;
+    width :1050px;
+    /* height :620px; */
+    height: 100%;
+
+    
+}
+
+
+
+.form_div_class{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom:80px;
+    
+}
+.form_div_class_search{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    
+}
+#div3{
+    display: none;
+}
+#div2{
+    display: none;
+}
+
+
+/* input[type="month"]::before { 
+	content: attr(data-placeholder);
+	width: 100%;
+} */
+
+/* hide our custom/fake placeholder text when in focus to show the default
+ * 'mm/dd/yyyy' value and when valid to show the users' date of birth value.
+ */
+/* input[type="month"]:focus::before,
+input[type="month"]:valid::before { display: none }  */

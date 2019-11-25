@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+           New Registration Page
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_newregpage.css">
+        <link rel="stylesheet" href="style.css">
+
+        
+       
+    </head>
+
+    <body bgcolor=f3f3f3>
+            <div class="div_class_register" align="center">
+               
+                    <form method="POST" action="newreg.php" enctype="multipart/form-data" class="form"> <!-- here put php file name-->
+                        <div class="form_div_class_register">
+                            <br><br>
+                            <img src="ko.png" height="150px">
+                            <br>
+                            <br>
+                            <!-- <div class="forgot_icon"></div> -->
+                            <!-- <label for="uname"><b>User name</b></label> -->
+                            <div class="option"  >
+                                 
+                           
+                            <br>
+                            <br>
+                           <div id="div1">
+                                <div  class="row">
+                                    <div class="main" >
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text"  placeholder="First Name" name="tfname" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Middle Name" name="tmname" ><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Last Name" name="tlname" >&nbsp;&nbsp;&nbsp;&nbsp;
+                           
+                            <input type="file"  placeholder="Upload your image" name="timg" onchange="showImage.call(this)" required></div>
+                            <div class="imgdiv" class="side"align="left" style="background-color: rgb(235, 235, 224); border: 3px solid #d3d3d3; width: 120px; height: 120px;" ><img src="upload.png" style="width:120px; height:120px" id="image"></div></div>
+                            <div class="other_input">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="date" data-placeholder="Date of Birth" name="tdob" required aria-required="true" >&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Blood Group" name="tblood" required><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="tel" placeholder="Aadhar Card Number" name="taadhar"  onKeypress="isInputNumber(event)" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Permenant Address(HomeTown)" name="tcurradr" required ><br>
+                            <input type="text" placeholder="House Name (Current)" name="thouse" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Town (Current)" name="ttown" required><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="District (Current)" name="tdist" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="State (Current)" name="tstate" required ><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Skills" name="tskill" required >&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!-- <input type="date" name="dob" data-placeholder="Date of birth" required aria-required="true" /> -->
+                            <input type="tel" autocomplete="off" placeholder="Mobile" name="tmob" onKeypress="isInputNumber(event)"  required maxlength="10"><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="date" data-placeholder="Date of Arrival" name="tarrival" required aria-required="true">&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Criminal Cases (if any)" name="tcrime" ><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Father's Name" name="tfather" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Mother's Name" name="tmother" required><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            <input type="text" placeholder="Educational Qualification" name="tedu" required >&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" placeholder="Agent Name" name="tagent" ></div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Agent Id" name="tagentid" onKeypress="isInputNumber(event)"  style=" width: 16% !important;
+                            margin-right: 39%; ">
+                           
+                        </div>
+                       
+                       
+                            <button class="button_register"  type="submit">REGISTER</button>
+                            <br>
+                            <br>
+                            <br>
+                            <br><br>
+                        </div>
+                    </form>
+                    </div>
+                    <script>
+                    function showImage()
+                    {
+                            if(this.files && this.files[0])
+                            {
+                                var obj=new FileReader();
+                                obj.onload=function(data)
+                                {
+                                    var image=document.getElementById("image");
+                                    image.src=data.target.result;
+                                    image.style.display="block";
+                                }
+                                obj.readAsDataURL(this.files[0]);
+                            }
+                    }
+                    
+                    function isInputNumber(evt)
+                    {
+                        var ch=String.fromCharCode(evt.which);
+                        if(!(/[0-9]/.test(ch)))
+                        {
+                            evt.preventDefault();
+                        }
+                    }
+                        </script>
+    </body>
+</html>

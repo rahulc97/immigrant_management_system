@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title >
+           USER Reset Password 
+        </title>
+
+        <link  rel="icon"  href="img.ico" >
+            
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style_login.css">
+    </head>
+
+    <body >
+
+            <div class="div_class_forgot" align="center">
+                    <form method="POST" action="userforgot.php"> <!-- here put php file name-->
+                        <div class="form_div_class_signup">
+                            <div class="forgot_icon"></div>
+                            <!-- <label for="uname"><b>User name</b></label> -->
+                            <input type="text" autocomplete="off" placeholder="Username" name="tuname" required>
+                            <input type="tel" autocomplete="off" placeholder="Mobile" name="tmob" required maxlength="10" onKeypress="isInputNumber(event)">
+                            <!-- <label for="password"><b>Password</b></label> -->
+                            <input type="password" placeholder="New Password" name="tpassword" id="tpassword" pattern=".{8,}" title="Minimum length 8"required>
+                            <input type="password" placeholder="Re-Password" name="trepassword" id="trepassword" pattern=".{8,}" title="Minimum length 8" required onkeyup="checkPass(); return false;">
+                            <button class="button_forgot"  type="submit">RESET PASSWORD</button>
+            
+                            
+                        </div>
+                    </form>
+                    </div>
+
+                    <script>
+
+function checkPass()
+{
+    //Store the password field objects into variables ...
+    var pass1 = document.getElementById('tpassword');
+    var pass2 = document.getElementById('trepassword');
+    //Store the Confimation Message Object ...
+    var message = document.getElementById('confirmMessage');
+    //Set the colors we will be using ...
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+    //Compare the values in the password field 
+    //and the confirmation field
+    if(pass1.value == pass2.value){
+        //The passwords match. 
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password 
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match!"
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+    }
+}  
+
+
+                            function isInputNumber(evt)
+                            {
+                                var ch=String.fromCharCode(evt.which);
+                                if(!(/[0-9]/.test(ch)))
+                                {
+                                    evt.preventDefault();
+                                }
+                            }</script>
+    </body>
+</html>

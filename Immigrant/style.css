@@ -1,0 +1,249 @@
+*{
+    margin-left: 0;
+    padding: 0;
+    margin:0;
+}
+.imgtop{
+    margin-left: 0;
+    padding: 0;
+    width: 103%;
+    height: 50px;
+    background-image: url(b.jpg);    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+.fade{
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.6); /* Black background with 0.5 opacity */
+    height: 50px;;
+    width: 100%;
+    /* padding: 20px; */
+  }
+.img1 {
+    margin-left: 0;
+    padding-bottom: 0;
+    
+    width: 103%;
+    height: 600px;
+    background-image: url(b.jpg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+.c1 {
+    color: rgb(66, 182, 218);
+    font-size: 70px;
+    margin: 30px;
+    background: #696969;
+    text-align: center;
+}
+nav {
+    
+    padding-top: 0;
+    width: 103%;
+    height: 80px;
+   /* background-color: rgba(70, 128, 236, 0.253); 
+   background-color: rgb(0, 89, 179);*/
+   background-color:  rgb(0, 77, 153);
+}
+.icon{
+    margin-top: 20px;
+}
+.wrapper{
+    background-image: url(b.jpg);
+    /* margin: 0 auto 0 60px;  */
+    margin: 0 auto 0 4%; 
+    width: 103%;
+    
+}
+ul{ 
+    margin-left: 5px;
+}
+ul li{
+    
+    list-style: none;
+    display: inline-block;
+    float : left;
+    line-height: 80px;
+    width: 120px; /*nav menublock size */
+    text-align: center;
+
+}
+ul li a{
+    width: 90px;
+    display: block; /*for full block as link*/
+    text-decoration: none;
+    font-size: 20px;
+    font-family: arial;
+    color: #fff;
+    padding: 0 20px;
+     
+}
+
+ul li a:hover{  /* to change th etext colour when curser entered to it*/
+    color:black;
+}
+.fillgap{
+    /* width: 300px; */
+    padding: 0 0 0 35%;
+}
+.login{
+    /* margin-top: 20px; */
+    width: 150px;
+    /* padding: 0 3% 0 45%; */
+}
+.logout{
+    /* margin-top: 20px; */
+    width: 150px;
+   
+    /* padding: 0 3% 0 45%; */
+}
+/* .loginicon{
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+}
+ .loginicon:before{
+    content : ' ';
+    position: absolute;
+    transition: .5s;
+    z-index: -1;
+    transform: rotate(-45deg) scale(0);
+     
+}
+.loginicon :hover{
+    color: black;
+}  */
+ul li ul li {
+    display: none;
+    width: 150px; /* drop down width*/
+    height: 60px;
+    text-align: center;
+    background: rgba(0, 77, 153,.6);
+    /* opacity: 0.4; */
+    margin-bottom: 2px;
+    line-height: 300%;
+    
+}
+ul li ul li  :hover{/*colour changing effect of drop down on mouse enter*/
+
+    background:rgba(94, 97, 100,.9);
+    color: black;
+    width: 140px;/* hover width*/
+    height: 60px;
+    /* opacity: 0.8; */
+}
+ul li:hover ul li{/*drop down effect on mouse enter*/
+    display: block;
+}
+/* Box effect starts here */
+
+
+
+.index-div{
+    position:absolute;
+    /* top:50%; */
+    left:50%;
+    transform: translateX(-50%);
+    /* float: left; */
+    /* box-align: center;       */
+    /* margin:0px auto;00 */
+    /* margin:60px auto; */
+    /* height:400px;
+    width:100%; */
+    display:inline-flex;
+    /* background-color:red; */
+    
+}
+.index-box1{
+    float: left;
+    margin: 16px 16px;
+    background-image: url(im.jpg);
+    width: 300px;
+    height: 250px; 
+    background-position: center;
+
+}
+.index-box2{
+    float: left;
+    margin: 16px 16px;
+    background-image: url(im.jpg);
+    width: 300px;
+    height: 250px; 
+    background-position: center;
+
+}
+.index-box3{
+    float: left;
+    margin: 16px 16px;
+    background-image: url(im.jpg);
+    width: 300px;
+    height: 250px; 
+    background-position: center;
+
+}
+.index-box3:hover{
+    float: left;
+    margin: 16px 16px;
+    background-image: url(img.png);
+    width: 300px;
+    height: 250px; 
+    background-position: center;
+    /* transform: scale(1.3, 1); */
+    /* z-index: 1; */
+    transition:all 1s;
+}
+.test1{
+    opacity: 0.5;
+    position :absolute;
+    left: 1.5%;
+    bottom: 0px;
+    width: 30.5%;
+   
+    height: 0px;
+    background-color: rgb(0, 85, 255);
+}
+.test2{
+    opacity: 0.5;
+    position :absolute;
+    left: 34.8%;
+    bottom: 0px;
+   
+    width: 30.5%;
+    height: 0px;
+    background-color: rgb(255, 128, 0);
+}
+.test3{
+    opacity: 0.5;
+    position :absolute;
+    left: 68%;
+    bottom: 0px;
+    width: 30.5%;
+    height: 0px;
+    background-color: rgb(128, 128, 128);
+}
+.index-box1:hover .test1{
+
+    transition:all 1s;
+    height: 100%;
+    /* background-color: red; */
+}
+.index-box2:hover .test2{
+
+    transition:all 1s;
+    height: 100%;
+    /* background-color: red; */
+}
+.index-box3:hover .test3{
+
+    transition:all 1s;
+    height: 100%;
+    /* background-color: red; */
+}
+
+/* Box effect ends */

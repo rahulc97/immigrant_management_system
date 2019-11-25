@@ -1,0 +1,182 @@
+body{
+    background: #ddd8d8;
+}
+form {
+    position: relative;
+    /* display: block; */
+    /* background: rgb(133, 173, 173); */
+    background: rgb(235, 235, 224);
+    /* border: 3px solid rgb(71, 107, 107); */
+    border: 3px solid #d3d3d3;
+    width: 100%;
+    height: 100%;
+    /* margin: 0,2; */
+    border-radius: 19px;
+    /* z-index: -1; */
+   
+}
+.user_login_icon{
+    
+    margin-top:1px; 
+    width: 100%;
+    height: 130px;
+    background-image: url(c.png);    
+    background-size :contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   margin-bottom: 25px;
+}
+.admin_login_icon{
+    
+    margin-top:1px; 
+    width: 100%;
+    height: 130px;
+    background-image: url(ad.gif);    
+    background-size :contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   margin-bottom: 25px;
+}
+.signup_icon{
+    margin-top:40px; 
+    width: 100%;
+    height: 130px;
+    background-image: url(c.png);    
+    background-size :contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   margin-bottom: 25px;
+}
+.forgot_icon{
+    
+    margin-top:40px; 
+    width: 100%;
+    height: 130px;
+    background-image: url(pr.png);   
+    /* background-image: url(fpp.png);   */
+    background-size :contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   margin-bottom: 25px;
+}
+input{
+    width: 60%;
+    height: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: block;
+   border-top-style: none;
+   border-bottom-style:  solid ;
+   border-left-style: none;
+   border-right-style: none;
+   background: transparent;
+   border-width: 1.1px;
+  border-color: #962390;
+  color: #962390;
+}
+input:focus{   /* to remove the text box focus */
+    outline:none;
+    
+}
+ ::placeholder{ /* used to change the hint colour in text box */
+    color: #962390;
+}
+label{
+    /* display: block; */
+    display:none;
+    color: #962390;
+}
+button{
+    margin-top: 35px;
+    margin-bottom: 25px;
+    width: 40%;
+    display: block;
+    color:#fff;
+    font-size: 20px;
+    background: #962390;
+    border-radius: 15px;
+    border: none;
+}
+.button_forgot{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 65%;
+    display: block;
+    color:#fff;
+    font-size: 20px;
+    background: #962390;
+    border-radius: 15px;
+    border: none;
+}
+button:focus{
+    outline: none;
+}
+a{
+    display: inline-block;
+    color: #962390;
+    text-decoration: none;
+    /* padding: 30px,300px; */
+}
+.div_class{
+    position: relative;
+    /* display: block; */
+    /* padding-left: 30%; */
+    /* padding-top: 10%; */
+    /* margin: 50px,auto; */
+    /* margin: 50,30; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom:80px;
+    width :350px;
+    height :500px;
+    
+}
+.div_class_signup{
+    position: relative;
+    /* display: block; */
+    /* padding-left: 30%; */
+    /* padding-top: 10%; */
+    /* margin: 50px,auto; */
+    /* margin: 50,30; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom:30px;
+    width :350px;
+    height :620px;
+    
+}
+.div_class_forgot{
+    position: relative;
+    /* display: block; */
+    /* padding-left: 30%; */
+    /* padding-top: 10%; */
+    /* margin: 50px,auto; */
+    /* margin: 50,30; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:70px;
+    width :350px;
+    height :520px;
+    
+}
+
+
+.form_div_class{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom:80px;
+    
+}
+.form_div_class_signup{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom:20px;
+    
+}
